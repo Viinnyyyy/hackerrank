@@ -1,0 +1,5 @@
+#ignores the .swp files
+*.swp
+
+#ignores the :help tags
+'help tags'
