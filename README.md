@@ -9,3 +9,4 @@ While the .pseudocode file does not include all nuances of my thoughts, I believ
 my coding.
 This will be updated frequently
 
+Some problems would definelty have one or more commits between different laptops
