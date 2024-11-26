@@ -1,0 +1,65 @@
+Pseudocode for /Users/mac/Documents/hackerrank/romannumerals.py
+===============================================================
+
+While the first regex attempt failed and came short in some very needed
+places such as the case of IIII or XVII
+What can be done to improve the reliability of the code?
+
+When it comes to roman numerals, the things to note
+1. The range is from 1 to 4000. i.e. I to MMMM
+2. Some values have a limited range
+3. Order matters very much as the rules are somewhat rigid
+
+M ---> 1000
+D ---> 500
+C ---> 100
+L ---> 50
+X ---> 10
+V ---> 5
+I ---> 1
+
+
+There is a great way to think about it.
+=======================================
+What sections need to be isolated and what sections do no need to be isolated?
+Which can come before which?
+What are tricky cases that must be accounted for?
+
+One rule also is that no number can come four times in a row
+M is independent of anything else.
+CM, DCCC, DCC, DC, D, CD, CCC, CC, C
+XC, LXXX, LXX, LX, L, XL, XXX, XX, X
+IX, VIII, VII, VI, V, IV, III, II, I
+
+The regex pattern that was hard for me to understand immediately was:
+D?C{0,3}
+This just simply means :
+D can either be there or not. If D is not there, C can be in zero to three places.
+If D is there, C can either be in zero or three places.
+
+Split up, it might be something like this:
+D<there>C<moves from 0 to 3>
+D<no there>C<still moves from 0 to 3>
+
+
+Most regex can be written in multiple ways.
+Can we get another way to write this in?
+
+
+"?" ---> zero or none
+Almost a one or zero. If there or not
+
+Difference between * and +
+* >= zero
++ >= one
+1<= ? <=0  ?==> {0,1}
+
+So the ? tracks only the char or set of characters before it.
+
+R?o ---> checks if R is there or not: finds Ro or o
+RF?o ---> checks RFo or Ro
+(RF)?o ---> matches RFo or o
+
+
+Do you get it now?
+

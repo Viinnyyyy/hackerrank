@@ -1,0 +1,32 @@
+Pseudocode for /Users/mac/Documents/hackerrank/phonenumbers.py
+==============================================================
+
+The only constant or rather constraint on the code is the starting number and the length of the number:
+The length is 15 and the starting number is from 7-9.
+
+The input
+=========
+n+1 lines:
+Where the first input is the amount of lines that are to be checked-->
+	Could we print all as it is there to save memory?
+	Or append it as a string with '\n' as the factor for joining them.
+
+The output
+==========
+YES or NO as depends on whether it is a valid number or not
+
+
+Process
+=======
+Get the first number and use it like a while function.
+import re
+phonebook = ''
+while i < n:
+     phonenumber = str(input())
+     num_detector = re.compile(r"^[7-9](\d{14})$")
+     validator = num_detector.match(string)
+     if validator:
+	print('YES')
+     else:
+	print('NO')
+     lambda number: 'YES' if validator==True else: 'NO'

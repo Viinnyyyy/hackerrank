@@ -1,0 +1,43 @@
+# pseudocode implementation.
+
+word = str(input())
+
+i = 0
+def sumOccurences(word):
+ i = 0
+ char = 0
+ while i < len(word) + 1:
+  # get the character
+  # would it make sense to put all the possible values of the word in a dictionary
+  for char in word;
+
+#ensure the word is stringed
+
+checkFunction(word):
+  # this checks the length and sum of the numbers are the same.
+  while len(word) == sumOccurences(word):
+    print(True)
+
+
+
+# the function that stores and gets the number and list into a dictionary
+# Probably not the most efficient, as at this typing
+
+def charOccurenceDictionary(word):
+  occurence = 0
+
+  charDictionaty = {letter: occurence}
+  for letter.unique() in word:
+    occurence += 1  # increase the occurrence of the word
+    return charOccurenceDictionary(word)  # my crude attempt at a recursive function
+
+
+strippedWord = word.strip()
+strippedWordLen = len(strippedWord)
+
+
+# Can the strip function be used to itemize each char of the word
+#
+#
+# Is the question asking for alphabetical characters only or alphanumerical characters can be gotten also?
+#
