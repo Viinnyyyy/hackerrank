@@ -30,3 +30,37 @@ while i < n:
      else:
 	print('NO')
      lambda number: 'YES' if validator==True else: 'NO'
+
+While the number validator is working, what can be done to make the program run smoother?
+Remember that we are already looping "n" times for the input,right?
+
+So it makes no sense to have multiple loops in themselves.
+Why? Time complexity is increasing as the nested loop functions increase.
+
+So there can either be two loop functions in parallel OR
+We have one loop function in which the functions and operations are happening simultaneously per loop.
+
+Which would be less computationally tasking and demanding on the computer program?
+
+So we make the regex compute in real time, the necessary validity for each input
+
+Read in n
+validity list
+While no of input <= n:
+    regex comparison;
+    Valid or invalid
+    Append result to a string/list
+    move to next input
+print the list as a string, separated by newlines    
+
+=====>LOL<=======
+I was so stupid
+After I wrote the constraints, I still made the error of not putting the constraints on it mehhn.
+
+{1,14} should be the constraints on the length <<===That can be inputted
+
+=====>LOL *2<=======
+I made the above error AGAINNN.
+I made the mistake of taking the length of the constraints as the validity status for the number. The number is meant to be 10 digits only.
+
+The validity is meant to be {9}

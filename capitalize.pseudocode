@@ -1,0 +1,25 @@
+My thoughts on the project
+
+Take in a string
+Print out the edited string: simple.
+
+After taking in the string,
+convert it to a list.
+take the first character from both the first and last name and capitalize it.
+
+Replace the first name with the capitalized letter and the second name with 
+the capitalized letter.
+
+
+Can you use a title case instead to do it?
+
+
+Title works like a charm mehhn
+
+Let's see if it would work on alphanumeric characters.
+
+The replace method takes in three variables:
+
+SO this only works for the first two.
+
+Iterating over the string makes it much more complete

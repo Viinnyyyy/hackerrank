@@ -1,0 +1,76 @@
+Merge the Tools:
+================
+
+Divide each string into k segments.
+
+Although, k is a factor of length of string.
+Split into k segments of len(string)/k
+
+split_string  = [string[i:i+k] for i in range(0, len(string), k)]
+[split_string.unique() for string in split_split]
+
+''.join(set(string))
+
+
+This is what I am thinking about
+
+I need something to take the strings just as they are and get the unique things from them.
+
+Can I also get these sets not to arrange themselves?
+Sets should have a property that makes them check the data and print them out as FIFO right?
+
+
+I can map the function of unique to each individual subset of that data right?
+
+ *****************************************
+ # Set to store unique characters
+    # in the given string
+    s = set([])
+ 
+    # Loop to traverse the string
+    for i in range(len(st)):
+ 
+        # Insert current character
+        # into the set
+        s.add(st[i])
+******************************************
+		^
+		|
+		|
+	    sample code (Does not seem to be working with sense abeg)
+
+Sorted() gave us the necessary framework to build on.
+using the index of the string as the key for the uniqueness
+
+So the thing is to loop over the substrings of the chunks. This makes it very easy 
+
+
+The set of a list is constant?   ----> Yes it is.
+
+The process in my head:
+    1. Get the substrings
+    2. Use the uniquer thingy on each substring
+    3. Print each substring on each line
+
+For 3, it is just to use the end="\n" to print on each new line.
+
+For 1, the substrings are gotten using the chunk_list list comprehension format to get it all in place.
+
+But the main koko is set 2.
+How can I process this list of chunk_strings into whatever?
+
+Is there any need of me storing the value to memory?
+I mean, just print the damn mf
+
+Since we are using custom logic with our stuff, a list comprehension will seem to work wonders in this case.
+
+There is a for loop that works somewhat flawlessly:
+		|
+		|
+		~
+for i in range(len(chunk_string)):
+    print(*sorted(set(chunk_string[i]), key=split_string[i].index), sep='')
+
+But is there a way to use list comprehension to get it right on track
+
+[print(*sorted(set(chunk_string[i]), key=split_string[i].index), sep='') for i in range(len(chunk_string))]

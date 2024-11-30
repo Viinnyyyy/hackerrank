@@ -1,0 +1,153 @@
+This game tries to get the possible uses of words in a given string.
+
+Stuart and Kelvin are the characters who we are to determine the scores of.
+
+** can there be a tie?** -----> Yes and when there is a tie, print "Draw"
+
+Stuart starts with consonants, Kelvin starts with vowels.
+
+Would a regex function get the best out of these?
+Is there a regex function to easily do that?
+
+Spell out the vowels:
+
+List comprehension for when the alphabets is not in vowels:
+Then the resulting initializing word goes to Stuart
+
+The reverse goes to Kelvin as his starting word.
+
+So I did something
+I converted the input string to individual characters
+Then I ran them through the vowels and sifted the consonants to Stuart and the vowels to Kelvin
+
+These make up their starting points in the main string
+
+
+
+So it is to make a sub function that counts the appearances of each individual search using regex
+
+((((()))))But how can I easily search iteratively from the beginning and pick out the unique ones?(((((())))))
+I guess that is something to think about and make happen <------- To expand on when the time is right.
+
+
+Recursively search with re and move through each iteration of every possible thing
+
+So two things will be happening simultaneously:
+
+1. First is to move through each subset of the main string for the duration of the string.
+2. For each of those iterations, check each uniqueness of each of the match searches within the master string and get the counts
+
+
+How can I get the unique things here
+==============================================================
+
+Let's use the string: 'demons'
+Stuart will have:
+d
+de
+dem
+demo
+demon
+demons
+m
+mo
+mons
+n
+ns
+n
+
+
+Kelvin will have
+e
+em
+emo
+emon
+emons
+o
+on
+ons
+
+
+Let's try banana
+
+Stuart will have:
+b
+ba
+ban
+bana
+banan
+banana
+n
+na
+nan
+nana
+n
+na
+
+
+Kelvin will have:
+a
+an
+ana
+anan
+anana
+a
+an
+ana
+a
+
+
+In my search, it is evident that no matter the order and if we ignore the ranking of each word, we still come up to the same score
+
+So we rummage through the list and increase it.
+
+Stuart_indexes = [i for i, v in enumerate(input_list) if v not in vowels]
+Kelvin_indexes = [i for i, v in enumerate(input_list) if v not in vowels]
+
+These gets the indices iterable to go through with when doing the iteration
+
+
+So I have a list of values, how can I iterate over the values?
+I have been able to get this to work:
+
+This is by making a substring of the particular pattern
+at the second "n" in "banana"
+
+The substring is "nana"
+we iterate over the index of this substring by getting the index with the enumerate() function
+count = 0
+for k, v in enumerate(substring):
+    print(sub_string[0:k+1])
+
+This prints each substring by looping over the characters and increasing the splice ends.
+	n
+	na
+	nan
+	nana
+
+	^
+	|
+	|
+It was much better for you to iterate till you reach the final word as seen above
+
+
+Shit ran but was not optimized.
+
+How can I make this run faster?
+
+
+
+
+Another one:
+
+Get the values from the list that are consonants and then search with regex anyone that begins with them. <---- For Stuart
+For Kelvin, get the vowels.
+
+
+:::::::Shocking fucking discovery::::::
+=======================================
+
+There is no need iterating over it. Once you get each possible subsets, just get the length of the subset list and you're good to go.
+
+Hope it works sha
+

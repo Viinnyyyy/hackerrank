@@ -1,0 +1,37 @@
+the pattern is '.|.'
+
+can i be adding  this pattern to the bottom and centralizing it after every iteration for the top and then for the bottom, be removing it.
+
+initializing a string to hold the pattern
+
+pattern = '.|.'
+pattern.append('.|..|.') instead of appending, do we multiply by a certain number
+
+center it again.
+
+But there is the whitespace something.
+
+Okayyyy. This pattern can be the word.
+the '---' can be the 'whitespace' that will be used. Make sense. Make sense.
+
+Then for the welcome message nko?
+
+it is just 'WELCOME' with the whitespaces all around it.
+
+So it comprises of three stages
+0 to n - 1/2 -----> which is the top
+n - 1/2 + 1 -----> which is the welcome place
+n - 1 to n  -----> which is the bottom pyramid
+
+for the first stage, as it is increasing, the word is reducing
+
+the first pyramid contains(for example 5x15):
+
+_______c_______
+______ccc______
+____Welcome____
+______ccc______
+_______c_______
+
+
+the dashes reduce by the increment used in the string

@@ -1,0 +1,44 @@
+Using the ascii code and the the chr() function, we can print the functions increasingly from a to z all in small lettersf.
+
+This is quite useful as it means we can cycle through the characters.
+
+2 ways to go about it:
+    1. Preload the alphabets in a list.
+    2. Print the alphabets just-in-time. 
+1. saves time and one iteration to go over a list till you reach a number.
+2. saves space as only the necessary elements are saved in the memory.
+
+But in one, there are kinda two items saved to memory. One is the list and the second is the iterand that stores the iteration for when we go through each iterand. 
+
+How can this be solved by using only the resources required?
+
+whitespace is also the - as in the doormat example.
+
+
+
+I can also try to make a sublist of the alphabets leading until the next character:
+
+1.We print the list till we get to list
+2.We remove the first character of the sublist
+3.print again until len(sublisti) = 1
+
+
+lets try something:
+alist = [1,2,3,4,5]
+alist[-1] = 5
+alist[-2] = 4
+alist[-3] = 3
+alist[-4] = 2
+alist[0] = 1
+alist[1] = 2
+alist[2] = 3
+alist[3] = 4
+alist[4] = 5
+
+
+What i eventually did was to reverse the list and append the normal list to it after removing the first item
+
+reverse_alist = [5,4,3,2,1]; alist[1:] = [2,3,4,5]
+joined_alist = [5,4,3,2,1,2,3,4,5]
+
+

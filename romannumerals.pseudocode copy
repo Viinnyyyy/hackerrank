@@ -1,0 +1,68 @@
+Pseudocode for Roman Numerals
+=============================
+
+What I have to do is to get the order of Roman numerals.
+
+
+Does regex have the format already?
+Saves me a lot of time in handling the stress associated with programming functions that fix this shit
+
+It seems regex easily has this things on hand. At least ----> No be at least o.
+
+
+This nigga is making me so happyyyyyy. 
+
+M --> 1000
+D --> 500
+C --> 100
+L --> 50
+X --> 10
+V --> 5
+I --> 1
+
+The range is within 4000
+So the maximum M can be is 4
+D and C can be rearranged as:
+C
+CC
+CCC
+CD
+D
+DC
+DCC
+DCCC
+
+same with L and X
+And V and I
+After M: between 100 and 900 can be accounted for
+C can be within {0,3}
+CD once
+D1C{0,3}
+CM
+
+After C: between 10 and 90 can be accounted for
+X can be within {0,3}
+XL once
+L1X{0,3}
+XC
+
+After X: between 1 and 9 can be accounted for
+I can be within {0,3}
+IV once
+V1I{0,3}
+IX
+
+^M(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?{0,3})$
+
+This is not complete:
+Any numeral could be--->
+    MMMM
+    D
+    CCC
+    L
+    XXX
+    V
+    III
+
+
+    Back to the drawing table
