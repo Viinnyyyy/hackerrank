@@ -1,0 +1,26 @@
+Pseudocode for /Users/mac/Documents/hackerrank/hackerrank
+=========================================================
+
+After copying the contents from the phonenumber case and reworking the variables to reflect the email address problem
+There seems to be an "email.utils" function to get used to.
+
+Can email.utils be more efficient that using the simple regex problem?
+What can be done to make this hasslefree
+
+<<Input Format>>
+The first is the number of email addresses in it
+
+
+<<Output Format>>
+We print out the valid input.
+
+
+<<Constraints and Validity search>>
+name <user@email.com>
+
+username@domain.extension
+username ==> ^[a-zA-Z0-9]._- <===== Alphanumeric data should include numbers. Don't you think?
+@
+domain ==> a-zA-Z
+. #<----- There should be a backslash "\" to remove the "." from the special character
+extension ==> a-z{1,3}
