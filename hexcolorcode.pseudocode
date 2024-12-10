@@ -1,0 +1,98 @@
+Pseudocode for /Users/mac/Documents/hackerrank/hackerrank
+=========================================================
+
+This code is to validate hexcodes
+
+<<Input Format>>
+The first line contains n: the number of lines in each code
+The next n inputs are the code.
+Randomized and as normal codes
+
+
+Selector   <<<<===== This guy is not picked. though
+So that means our regex will be inside the "{}"
+{
+	Property: Value;
+}
+
+#BED <<<<==== Will not be picked
+{
+    color: #FfFdF8; background-color:#aef;
+    font-size: 123px;
+    background: -webkit-linear-gradient(top, #f9f9f9, #fff);
+}
+#Cab  <<<<==== Will not be picked
+{
+    background-color: #ABC;
+    border: 2px dashed #fff;
+}   
+
+<<Output Format>>
+We are just outputting EVERY occurrence of the hexcode found. Seems the match doesn't work for more than one match per search right?
+Or is there any one that.
+
+#FfFdF8
+#aef
+#f9f9f9
+#fff
+#ABC
+#fff
+
+
+This only picks in the curly brackets
+===> Does the input always start in curly brackets?
+
+>>>From the problem set<<<
+#BED and #Cab satisfy the Hex Color Code criteria, but they are used as selectors and not as color codes in the given CSS.
+
+
+
+
+
+Which is more efficient and would use less memory in my life?
+
+
+<<Constraints and Validity search>>
+There can be at most 50 lines of code
+Starts with #
+3/6 digits
+A-F0-9a-f
+
+
+*************************************
+How can I make it only use 3/6 lines?    <========== using the '|'
+*************************************
+
+The plan to convert the output of the findall function to reduce stress.
+Findall function brings out a list.
+
+It is to convert this list into a multiline string 
+For each line of the string, we need to put print all occurrences of the regex.
+
+
+Soooooo. The function is not reading it
+I will need to extract the search_depth from the line if this does not work.
+
+Omooooo
+Another roadblock. Very goof for learning nonetheless.
+
+I will take in the input. Split into a list and then use it as the for loop.
+
+I will assign the first subset to the string input
+Then I will assign the remaining to the for loop case
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<
+lines = []
+while True:
+    line = input()
+    if line:
+        lines.append(line)
+    else:
+        break
+text = '\n'.join(lines)
+>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Need to modify this code to collect the input and store them in somewhere <=done
+
+
