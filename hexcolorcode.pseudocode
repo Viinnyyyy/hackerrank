@@ -27,6 +27,14 @@ So that means our regex will be inside the "{}"
     border: 2px dashed #fff;
 }   
 
+To ensure that the ones outside the curly brackets are not picked, how do we go about it, seeing that just excluding the curly brackets is not going to work seeing they are on different lines. How do I exclude the ones like that?
+
+I can lazily just put it that it must match all occurrence so long there is any character in front of them
+
+
+I used the '.' to match ANY character before and after
+Hope one smart guy doesn't do one smart thing to make me fail this 
+
 <<Output Format>>
 We are just outputting EVERY occurrence of the hexcode found. Seems the match doesn't work for more than one match per search right?
 Or is there any one that.
@@ -46,9 +54,6 @@ This only picks in the curly brackets
 #BED and #Cab satisfy the Hex Color Code criteria, but they are used as selectors and not as color codes in the given CSS.
 
 
-
-
-
 Which is more efficient and would use less memory in my life?
 
 
@@ -59,12 +64,13 @@ Starts with #
 A-F0-9a-f
 
 
+
 *************************************
 How can I make it only use 3/6 lines?    <========== using the '|'
 *************************************
 
 The plan to convert the output of the findall function to reduce stress.
-Findall function brings out a list.
+Findall function brings out a liste
 
 It is to convert this list into a multiline string 
 For each line of the string, we need to put print all occurrences of the regex.
@@ -74,7 +80,7 @@ Soooooo. The function is not reading it
 I will need to extract the search_depth from the line if this does not work.
 
 Omooooo
-Another roadblock. Very goof for learning nonetheless.
+Another roadblock. Very good for learning nonetheless.
 
 I will take in the input. Split into a list and then use it as the for loop.
 
@@ -95,4 +101,36 @@ text = '\n'.join(lines)
 
 Need to modify this code to collect the input and store them in somewhere <=done
 
+
+###>Stuff incase I miss my way<###
+import re
+code_lines = []
+while True:
+    code_line = input()
+    if code_line:
+        code_lines.append(code_line)
+    else:
+        break
+# line_string = user_string.split('\n')
+code_length = int(code_lines[0])
+validating_list = []
+hex_detector = r"#[a-fA-F0-9]{3}|#[a-fA-F0-9]{6}"
+for line in code_lines[1:]:
+    validator = re.findall(hex_detector, line)
+    validating_list.append(*validator)
+# print('\n'.join(validating_list))
+print(*validating_list, sep='\n')
+
+
+%%%%%%%%%%%%%%%%%
+Something to note
+%%%%%%%%%%%%%%%%%
+There is something to consider. It is better for it to greedily search for 6 before 3. This gives you the most more before the least.
+
+Now this roadblock has been conquered, what is the stopping the function from getting in the stuff like mahhd 
+
+
+So it seems the problem now is in the input loop.
+What could be the bug in the loop now?
+Is there a python debugger that I can use to make my life much easier?
 
