@@ -1,13 +1,11 @@
 import re
 user_input = int(input())
-validating_list = ''
-hex_detector = r".#[a-fA-F0-9]{6}|.#[a-fA-F0-9]{3}"
+css_string = ""
 for i in range(user_input):
-    code_line = str(input())
-    print(code_line)
-    validator = re.findall(hex_detector, code_line)
-    # print(validator)
-    validating_list = validating_list + ('\n'.join(validator))
-# print('\n'.join(validating_list))
-print(validating_list, sep='\n')
+    css_string += input()
+section_detector = r"{.*?}"
+hex_detector = r"#[a-fA-F0-9]{6}|#[a-fA-F0-9]{3}"
 
+sections = re.findall(section_detector, css_string)
+for section in sections:
+    print(*re.findall(hex_detector, section), sep='\n')

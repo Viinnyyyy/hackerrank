@@ -1,0 +1,36 @@
+Pseudocode for Documents/hackkerank/hackkerank/floatingpoint.py
+===============================================================
+
+This code is to validate floating point
+
+<<Input Format>>
+
+<<Output Format>>
+True or False.
+What can I do to make it much quicker?  <<<===== Using a lambda function
+
+
+<<Constraints and Validity search>>
+The number must start with any of these [+-.] <=== But ensure that it picks it once
+
+Must contain one decimal point
+
+i.e. 12.0 <---- good
+     12.  <---- bad
+
+Regex would be something like 
+
+
+
+
+This is an attempt at a regex that tries to match the decimal numbers:
+
+>>>>>r'[+-.]{1}([0-9]+)\\.([0-9]+)'<<<<<<
+
+It falls short with the inclusion of more than one decimal point in it.
+How can I remove excess decimal points or not match those which have more than one decimal point in it?
+
+>>>>>>>>>>>> r''<<<<<<<<<<<<<<<
+
+[01][0-9]|2[0-3] <<<<----- Time using regex
+

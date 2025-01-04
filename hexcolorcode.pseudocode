@@ -125,7 +125,7 @@ print(*validating_list, sep='\n')
 %%%%%%%%%%%%%%%%%
 Something to note
 %%%%%%%%%%%%%%%%%
-There is something to consider. It is better for it to greedily search for 6 before 3. This gives you the most more before the least.
+>>>>There is something to consider. It is better for it to greedily search for 6 before 3. This gives you the most more before the least.<<<<
 
 Now this roadblock has been conquered, what is the stopping the function from getting in the stuff like mahhd 
 
@@ -134,3 +134,8 @@ So it seems the problem now is in the input loop.
 What could be the bug in the loop now?
 Is there a python debugger that I can use to make my life much easier?
 
+
+
+Another thing to do is to search and find ONLY inside curly brackets, return the places and then findall in them
+
+Or search multiline within the brackets and use that to esrach the main regex
